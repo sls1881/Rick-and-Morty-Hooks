@@ -23,6 +23,7 @@ export default function Details() {
 
     return (
         <div>
+            <h1>Rick and Morty Character</h1>
             {loading ? <Spinner/> : <DetailsItem character={character}/>}
         </div>
     )

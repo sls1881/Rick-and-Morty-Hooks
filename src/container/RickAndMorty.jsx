@@ -21,7 +21,8 @@ useEffect(() => {
 }, [page]);
 
     return (
-        <div>
+        <div className={styles.entireContainer}>
+            <h1>Rick and Morty Characters</h1>
             <div className={styles.characterContainer}>
             {loading ? <Spinner/> : <CharacterList characters={characters}/>}
             </div>

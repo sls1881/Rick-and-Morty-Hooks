@@ -5,11 +5,12 @@ import styles from '../App.css'
 
 function CharacterList({ characters }) {
     return (
-        <div>
+        <div className={styles.characterStyles}>
             <ul aria-label='characters'>
                 {characters.map((character) => (
                 <li key={character.id}> 
                     <CharacterItem {...character}/>
+                    <hr/>
                 </li>
                 ))}
             </ul>

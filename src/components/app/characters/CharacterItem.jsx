@@ -8,8 +8,8 @@ function CharacterItem({ id, name, species, image }) {
         <Link className={styles.link} to={`/${id}`}>
         <div>
             <h2>{name}</h2>
-            <p>{species}</p>
             <img alt={name} src={image}/>
+            <p>{species}</p>
         </div>
         </Link>
     )
