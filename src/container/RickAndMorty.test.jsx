@@ -37,7 +37,7 @@ render(<MemoryRouter><RickAndMorty/></MemoryRouter>)
         <Route path='/:id'>
             <Details />
         </ Route>
-    </MemoryRouter>)
+    </MemoryRouter>) 
 
         screen.getByAltText('spinner');
         const ul = await screen.findByRole('list', {name: 'character'})
