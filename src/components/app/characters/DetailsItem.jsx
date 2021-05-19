@@ -1,15 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-function DetailsItem({ name, species, status, image, url }) {
+function DetailsItem({ character: {name, species, status, image, url}, }) {
     return (
-        <div>
+        <ul aria-label='character'>
+            <li>
             <h2>{name}</h2>
             <p>{species}</p>
             <p>{status}</p>
             <img alt={name} src={image}/>
-            <a href={url}>Character Data</a>
-        </div>
+            <a href={url}><p>Character Data</p></a>
+            </li>
+        </ul>
     )
 }
 

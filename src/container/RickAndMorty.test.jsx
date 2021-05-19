@@ -5,7 +5,8 @@ import { setupServer } from 'msw/node';
 import { rest } from 'msw';
 import RickAndMorty from './RickAndMorty';
 import mockData from './chracters.json'
-import { MemoryRouter } from 'react-router';
+import { MemoryRouter, Route } from 'react-router';
+import Details from './Details';
 
 const server = setupServer(rest.get('https://rickandmortyapi.com/api/character', (req, res, ctx) => {
     return res(ctx.json(mockData))
@@ -22,9 +23,29 @@ render(<MemoryRouter><RickAndMorty/></MemoryRouter>)
         const ul = await screen.findByRole('list', {name: 'characters'})
         expect(ul).toMatchSnapshot();
 
+        const button = await screen.findByRole('button', { name: 'pages'})
+        userEvent.click(button);
+
         waitFor(() => {
             screen.getByAltText('Rick Sanchez')
             screen.getByText('Human')
+        })
+    })
+
+    it('Render a single character', async () => {
+        render(<MemoryRouter initialEntries={['/3']}>
+        <Route path='/:id'>
+            <Details />
+        </ Route>
+    </MemoryRouter>)
+
+        screen.getByAltText('spinner');
+        const ul = await screen.findByRole('list', {name: 'character'})
+        expect(ul).toMatchSnapshot();
+
+        return waitFor(() => {
+            screen.getByAltText('Summer Smith')
+            screen.getByText('Alive');
         })
     })
 })

@@ -28,7 +28,7 @@ useEffect(() => {
             <div className={styles.buttons}>
             <button onClick={() => setPage((prevPage) => prevPage - 1)}>Previous</button>
             <span>{page}</span>
-            <button onClick={() => setPage((nextPage) => nextPage + 1)}>Next</button>
+            <button aria-label='pages' onClick={() => setPage((nextPage) => nextPage + 1)}>Next</button>
             </div>
         </div>
     )
