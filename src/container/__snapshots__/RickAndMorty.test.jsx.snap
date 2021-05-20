@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rick and Morty API Render a list of characters to the page 1`] = `
+<ul
+  aria-label="characters"
+/>
+`;
+
+exports[`Rick and Morty API Render a single character 1`] = `
+<ul
+  aria-label="character"
+>
+  <li>
+    <h2>
+      Summer Smith
+    </h2>
+    <p>
+      Human
+    </p>
+    <p>
+      Alive
+    </p>
+    <img
+      alt="Summer Smith"
+      src="https://rickandmortyapi.com/api/character/avatar/3.jpeg"
+    />
+    <a
+      href="https://rickandmortyapi.com/api/character/3"
+    >
+      <p>
+        Character Data
+      </p>
+    </a>
+  </li>
+</ul>
+`;

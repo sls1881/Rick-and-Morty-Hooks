@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+body, button {
+    font-family: 'Reggae One', cursive;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+li {
+    list-style: none;
+}
+
+.link, a {
+    text-decoration: none;
+}
+
+h1 {
+    color: rgba(240, 72, 72, 0.564);
+}
+
+h2 {
+    color: rgba(252, 252, 116, 0.996);
+}
+
+p {
+    color: rgb(8, 98, 36);
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+  transition: .2s ease-in-out;
+}
+
+span {
+    color: white;
+    padding: 1rem;
+}
+
+.entireContainer {
+    text-align: center;
+}
