@@ -10,6 +10,11 @@ body, button {
     font-family: 'Reggae One', cursive;
 }
 
+.nav {
+    display: flex;
+    justify-content: space-around;
+}
+
 li {
     list-style: none;
 }

@@ -2,24 +2,10 @@ import React, { useState, useEffect } from 'react'
 import CharacterList from '../components/app/characters/CharacterList';
 import Spinner from '../components/Spinner';
 import styles from '../components/app/App.css';
-import { getCharacters } from '../services/ApiUtils';
+import useCharacters from '../hooks/characters';
 
 export default function RickAndMorty() {
-//useState
-const [characters, setCharacters] = useState([]);
-const [loading, setLoading] = useState(true);
-const [page, setPage] = useState(1);
-
-//useEffect and fetch
-useEffect(() => {
-    (async () => {
-        const characters = await getCharacters(page)
-        //setCharacter, setLoading, setPage
-        setCharacters(characters);
-        setLoading(false);
-    })();
-}, [page]);
-
+ const { characters, loading, page, setPage } = useCharacters();
     return (
         <div className={styles.entireContainer}>
             <h1>Rick and Morty Characters</h1>

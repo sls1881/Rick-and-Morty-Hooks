@@ -4,6 +4,7 @@ import CharacterItem from './CharacterItem'
 import styles from '../App.css'
 
 function CharacterList({ characters }) {
+    
     return (
         <div className={styles.characterStyles}>
             <ul aria-label='characters'>
